@@ -7,7 +7,7 @@ ENV["RACK_ENV"] = 'test' # because we need to know what database to work with
 # The environment determines what database to use.
 require './server'
 require 'database_cleaner'
-require 'sinatra'
+# require 'sinatra'
 require 'capybara/rspec'
 
 Capybara.app = Sinatra::Application.new
@@ -28,6 +28,8 @@ Capybara.app = Sinatra::Application.new
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  config.filter_run :focus
+  config.run_all_when_everything_filtered = true
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
