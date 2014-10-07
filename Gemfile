@@ -10,4 +10,5 @@ group :test, :development do
 	gem 'cucumber-sinatra'
 	gem 'capybara'
 	gem 'launchy'
+	gem 'database_cleaner'
 end

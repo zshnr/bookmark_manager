@@ -1,4 +1,3 @@
-require 'rubygems'
-require File.join(File.dirname(__FILE__), 'lib/bkman.rb')
+require './server'
 
-run bookmarkmanager
+run Sinatra::Application 

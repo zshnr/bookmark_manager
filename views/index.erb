@@ -1,0 +1,7 @@
+<header><h1> Welcome to the Bookmark Manager </header></h1>
+
+<body><ul>
+  <% @links.each do |link| %>
+    <li><a href="<%= link.url %>"><%= link.title %></a></li>
+  <% end %>
+</body></ul>
