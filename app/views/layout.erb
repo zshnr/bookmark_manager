@@ -3,20 +3,9 @@
 	<title>Bookmark manager</title>
   <link rel="stylesheet" type="text/css" href="/css/application.css">  
 </head>
-
-<% if flash[:errors] && !flash[:errors].empty? %>
-	Sorry, there were the following problems with the form.
- <ul id="errors">
-    <% flash[:errors].each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-  </ul>
-<% end %>
-
 <body>
-	<% if current_user %>
-		Welcome, <%= current_user.email %>
-	<% end %>
-  	<%= yield %>
+  <%= partial :welcome_message %>
+  <%= partial :flash %>
+  <%= yield %>
 </body>
 </html>
